@@ -38,7 +38,7 @@ export const waitSeconds = (seconds: number): Promise<void> => {
 };
 
 export async function getElementAndType(page: Page, xpath: string, textToType: string): Promise<void> {
-    const element = await page.waitForSelector(xpath);
+    const element = await page.waitForXPath(xpath);
 
     if (!element) {
         throw new Error(`Element not found for the XPath: ${xpath}`);
@@ -55,7 +55,7 @@ export async function getElementAndType(page: Page, xpath: string, textToType: s
 }
 
 export async function getElementAndClick(page: Page, xpath: string): Promise<void> {
-    const element = await page.waitForSelector(xpath);
+    const element = await page.waitForXPath(xpath);
 
     if (!element) {
         throw new Error(`Element not found for the XPath: ${xpath}`);
