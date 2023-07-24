@@ -7,9 +7,9 @@ async function doAutomation() {
     const page = await getPage();
 
     // Use the browser and page instances to perform your automation tasks
-    await page.goto('https://www.example.com');
+    await page.goto('https://www.doordash.com');
     // ... Your automation code ...
 }
 
 // Call the function
-doAutomation().then(async r => await close());
+doAutomation()
